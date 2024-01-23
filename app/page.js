@@ -1,113 +1,227 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+import Img from "./(compoments)/img/img";
+
+import Card from "./(compoments)/card/card";
+
+import a from "../public/hero image.png";
+
+import { FaBars } from "react-icons/fa";
+
+import client from "../public/client.png";
+
+import Div from "./(compoments)/div/div";
+
+import Footer from "./(compoments)/footer/footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      {/* Nav */}
+
+      <nav>
+        <div class="logo pl-5">
+          <b>basnik</b>
+        </div>
+        <input type="checkbox" id="click" />
+        <label for="click">
+          <FaBars />
+        </label>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Contect</a>
+          </li>
+          <li>
+            <a href="#">
+              <button className="border-2 border-green-600 px-3 py-1">
+                Sigen in
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button className="bg-blue-800 text-white px-3 py-1">
+                Sigen in
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Nav Close */}
+
+      {/* Section 1 start */}
+      <div className="lg:flex lg:flex-row gap-[15%] max-w-[1500px] mx-auto justify-center mt-7 ">
+        <div className="max-w-[500px]  mt-10">
+          <p className="lg:text-6xl md:text-5xl text-3xl font-bold :leading-[80px]">
+            Search for Homes in your Neighborhood
+          </p>
+
+          <p className="mt-8">
+            Online Estate Agency, the modern way to sell your own home. You can
+            use griffin residential to market your property.
+          </p>
+
+          <div className="flex gap-10 mt-9">
+            <div>
+              <p className="text-bold">
+                <b>Adress</b>
+              </p>
+              <p>587 brended Road</p>
+            </div>
+
+            <div>
+              <p>
+                <b>city</b>
+              </p>
+              <p>Elso ppl</p>
+            </div>
+
+            <div>
+              <button className="bg-blue-600 text-white py-1 px-3 rounded-2xl ">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[600px] ">
+          <Image src={a} alt="" />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* Section 1 Close */}
+
+      {/* Section 2 Start  */}
+
+      <div className="max-w-[1500px] flex mx-auto items-center gap-5 justify-around   mt-10 ">
+        <Img pr={require("../public/image 531 (1).png")} />
+        <Img pr={require("../public/image 527.png")} />
+        <Img pr={require("../public/image 528.png")} />
+        <Img pr={require("../public/image 529.png")} />
+        <Img pr={require("../public/image 530.png")} />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Section 2 Close  */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="max-w-[550px] mx-auto justify-center text-center mt-16">
+        <p className="text-3xl">
+          <b>What Can We Help You Find?</b>
+        </p>
       </div>
-    </main>
-  )
+
+      {/* section 3 start card */}
+
+      <div className="max-w-[1500px] md:flex lg:grid-cols-3 md:grid-cols-2 justify-center mx-auto gap-16 mt-16  ">
+        <Card sr={require("../public/icon 01.png")} />
+        <Card sr={require("../public/icon 02.png")} />
+        <Card sr={require("../public/icon 02.png")} />
+      </div>
+
+      {/* Section 3 Cars Close */}
+
+      {/* Section 4 start */}
+
+      <div className="max-w-[1100px] mt-10 mx-auto">
+        <div className="lg:flex lg:justify-between">
+          <div className="max-w-[430px]">
+            <p className="font-bold text-2xl">
+              <b>Our trending latest proparty</b>
+            </p>
+            <p>
+              Our unique process gives you peace of mind from home rent to
+              service
+            </p>
+          </div>
+
+          <div className="max-w-[440px] flex md:text-center  gap-3">
+            <a href="">
+              <button className="border-2 border-black rounded-xl py-3 px-4">
+                Propty type
+              </button>
+            </a>
+            <a href="">
+              <button className="bg-blue-950 text-white px-5 py-3 rounded-xl">
+                See All propty
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* section 4 Close */}
+
+      {/* Section 5 start */}
+
+      <div className="max-w-[1200px]  md:grid md:grid-cols-2 mx-auto justify-center ">
+        <Div hr={require("../public/image (1).png")} />
+        <Div hr={require("../public/image (2).png")} />
+
+        <Div hr={require("../public/image.png")} />
+
+        <Div hr={require("../public/image.png")} />
+      </div>
+
+      {/* Section 5 Close */}
+
+      {/* section 6 start */}
+
+      <div className="w-[100%]">
+        <div className="max-w-[550px] mt-20 mx-auto justify-center">
+          <div>
+            <p className="text-center text-3xl">
+              <b>TESTIMONIALS</b>
+            </p>
+            <p className="mt-5">
+              Our Clients send us bunch of smilies with our services and we love
+              them
+            </p>
+
+            <Image className="mx-auto" src={client} alt="" />
+          </div>
+
+          <div className="shadow-2xl py-4">
+            <p className="text-center mt-3">
+              "We are very pleased with the way Besnik handled our purchase of a
+              lake home. He was prompt, friendly, and very knowledgeable. He
+              followed up on any and all concerns.
+            </p>
+            <p className="text-center mt-4 text-2xl">
+              <b>Becky Nelson</b>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/*section 6 Close  */}
+
+      {/* Section 7 start footer */}
+
+      <div className="max-w-[1300px] lg:grid lg:grid-cols-4 mg:gird md:grid-cols-2 mx-auto justify-center text-center  mt-24">
+        <Footer para="Populares" />
+        <Footer para="About Us" />
+        <Footer para="Quick lines" />
+        <Footer para="Sports" />
+      </div>
+
+      <div className="max-w-[1200px] mt-20 flex justify-between mb-5  mx-auto">
+        <div>
+          <p className="font-bold text-3xl">besnik</p>
+        </div>
+
+        <div className="shadow-2xl px-3 py-2">
+          <button className="text-center">@ 2023 All copyright Resevers</button>
+        </div>
+      </div>
+    </>
+  );
 }
